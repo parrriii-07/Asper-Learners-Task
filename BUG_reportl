@@ -1,0 +1,17 @@
+#bug report 
+
+##bug1: script not working
+**why it happened:*8 script tag was in <head> before HTML loaded
+**how i fixedit:** moved <script src="index.js"></script> to just before </body>
+
+##bug 2: register button not cllickable 
+**reason:** css layer/pointer-events issue
+**how i fixed it** added pointer-events:auto; and z-index;10; in.submit-btn
+
+##bug 3: counter increases incorrectly 
+**reason:**spotLeft treated as string and addition used
+**how i fixed it ** changed spotsLeft to number and used subtraction 
+
+##bug4: submit button does nothing 
+**reason:** no submit event listener and incorrect form ID
+** how i fixed it** added form.addEventListener('submit',...) amd corrected form ID
